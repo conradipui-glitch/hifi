@@ -10,10 +10,10 @@ import {
 
 const NAV = [
   { href: "#digitize", label: "Оцифровка" },
-  { href: "#windows", label: "Windows и ПО" },
   { href: "#calculator", label: "Калькулятор" },
-  { href: "#services", label: "Услуги и цены" },
   { href: "#about", label: "Мастерская" },
+  { href: "#visit", label: "Передать кассеты" },
+  { href: "#faq", label: "Вопросы" },
   { href: "#contacts", label: "Контакты" },
 ];
 

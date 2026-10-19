@@ -51,7 +51,7 @@ function Corner({ className }: { className: string }) {
 const STATS: { value: string; label: string }[] = [
   { value: "MiniDV", label: "перевожу запись в цифровые файлы" },
   { value: "Digital8", label: "считываю цифровое видео с кассет" },
-  { value: "Лично", label: "принимаю технику и отвечаю на звонки" },
+  { value: "Лично", label: "принимаю кассеты и отвечаю на звонки" },
   { value: "До работ", label: "согласую с вами стоимость" },
 ];
 
@@ -119,18 +119,17 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display mt-5 text-[clamp(1.9rem,5.2vw,3.6rem)] leading-[1.12] font-black text-balance">
-                Оцифровываю кассеты.
-                <span className="mt-1 block text-brandsoft">Ремонтирую технику.</span>
+                Оцифровываю кассеты
+                <span className="mt-1 block text-brandsoft">MiniDV и Digital8.</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/90 sm:text-xl">
-                Я владелец и мастер «Хай-Фай» в Тобольске. Перевожу в цифру
-                семейные кассеты MiniDV и Digital8, устанавливаю Windows и
-                программы, восстанавливаю файлы со старых дисков. Ремонтирую
-                компьютеры, магнитолы, роботы-пылесосы и аудиотехнику.
-                Сам принимаю технику, объясняю, что нужно сделать, и согласую
-                стоимость до начала работы. По телефону вы говорите со мной.
+                Я владелец мастерской «Хай-Фай» в Тобольске. Перенесу семейные
+                записи MiniDV и Digital8 в файлы, которые можно смотреть без
+                видеокамеры. Сам принимаю кассеты, проверяю их состояние и
+                согласую стоимость до начала оцифровки. Верну оригиналы вместе
+                с готовыми файлами. По телефону вы говорите со мной.
               </p>
             </Reveal>
             <Reveal delay={240}>

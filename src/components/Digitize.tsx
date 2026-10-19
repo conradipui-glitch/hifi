@@ -295,7 +295,7 @@ export default function Digitize() {
     <section id="digitize" className="scroll-mt-24 bg-paper2/60">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <SectionHead
-          chapter="02"
+          chapter="01"
           kicker="Семейный архив"
           title={
             <>

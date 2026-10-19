@@ -311,7 +311,7 @@ export default function Calculator() {
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <SectionHead
           dark
-          chapter="04"
+          chapter="02"
           kicker="Смета без сюрпризов"
           title="Калькулятор оцифровки"
           lead={
