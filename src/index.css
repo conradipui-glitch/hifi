@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f5eedf;
+  --color-paper2: #efe4cb;
+  --color-cream: #fbf7ec;
+  --color-ink: #221b12;
+  --color-ink2: #33291b;
+  --color-ink3: #4a3d2a;
+  --color-brand: #df9426;
+  --color-brandsoft: #f3c969;
+  --color-branddark: #b96f14;
+  --color-rec: #d8452f;
+  --color-sage: #5e7a52;
+  --color-tape: #7a5b3a;
+
+  --font-display: "Unbounded", "Manrope", sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-hand: "Caveat", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brandsoft);
+  color: var(--color-ink);
+}
+
+/* ---------- Кассета / видоискатель: анимации ---------- */
+
+@keyframes reelspin {
+  to { transform: rotate(360deg); }
+}
+.reel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: reelspin 7s linear infinite;
+}
+.reel-fast { animation-duration: 4.2s; }
+.cassette-paused .reel { animation-play-state: paused; }
+
+@keyframes recblink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.12; }
+}
+.rec-dot { animation: recblink 1.5s ease-in-out infinite; }
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 46s linear infinite;
+  will-change: transform;
+}
+
+@keyframes trackingline {
+  0% { top: -12%; opacity: 0; }
+  6% { opacity: 1; }
+  45% { opacity: 1; }
+  55%, 100% { top: 108%; opacity: 0; }
+}
+.tracking-line {
+  animation: trackingline 11s linear infinite;
+}
+
+@keyframes softpulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.55); opacity: 0.25; }
+}
+.pulse-ring { animation: softpulse 2.4s ease-in-out infinite; }
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+  50% { transform: translateY(-7px) rotate(var(--tilt, 0deg)); }
+}
+.floaty { animation: floaty 7s ease-in-out infinite; }
+
+/* ---------- Film strip perforation ---------- */
+
+.filmstrip {
+  position: relative;
+  background: var(--color-ink);
+}
+.filmstrip::before,
+.filmstrip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 13px;
+  background-image: radial-gradient(circle at 9px 50%, var(--color-paper) 3.1px, transparent 3.8px);
+  background-size: 26px 13px;
+  background-repeat: repeat-x;
+  opacity: 0.92;
+  pointer-events: none;
+}
+.filmstrip::before { top: 5px; }
+.filmstrip::after { bottom: 5px; }
+
+/* ---------- Зерно (лёгкий шум плёнки) ---------- */
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Range slider (tape age) ---------- */
+
+.tape-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-brand) 55%, var(--color-rec));
+  outline: none;
+  cursor: pointer;
+}
+.tape-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  border: 3px solid var(--color-ink);
+  box-shadow: 0 3px 0 rgba(34, 27, 18, 0.35);
+  cursor: grab;
+}
+.tape-range::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  border: 3px solid var(--color-ink);
+  box-shadow: 0 3px 0 rgba(34, 27, 18, 0.35);
+  cursor: grab;
+}
+.tape-range:focus-visible {
+  outline: 3px solid var(--color-branddark);
+  outline-offset: 4px;
+}
+
+/* ---------- Focus visibility ---------- */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-branddark);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reel, .rec-dot, .marquee-track, .tracking-line, .pulse-ring, .floaty {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
