@@ -23,7 +23,7 @@ function MobileCallBar() {
           <Phone className="h-5.5 w-5.5 shrink-0" />
           <span className="leading-tight">
             <span className="block text-[16px] font-extrabold">Позвонить</span>
-            <span className="block font-mono text-[13px] font-bold">
+            <span className="block font-sans text-[13.5px] font-extrabold tabular-nums">
               {PHONE_MOBILE_DISPLAY}
             </span>
           </span>

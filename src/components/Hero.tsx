@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Calculator, Pause, Play } from "lucide-react";
 import { Digital8Cassette, TapeSticker } from "./Cassette";
 import { CallButton, Reveal, StatusDot, useOpenStatus, useReducedMotion } from "./ui";
+import { TAPE_KINDS, formatMoney } from "../lib/data";
 
 /* Таймкод как на видеокамере: 25 кадров в секунду (PAL). */
 function Timecode({ playing }: { playing: boolean }) {
@@ -118,18 +119,36 @@ export default function Hero() {
               </p>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="font-display mt-5 text-[clamp(1.9rem,5.2vw,3.6rem)] leading-[1.12] font-black text-balance">
-                Оцифровываю кассеты
-                <span className="mt-1 block text-brandsoft">MiniDV и Digital8.</span>
+              <h1 className="font-display mt-5 text-[clamp(1.6rem,5.2vw,3.6rem)] leading-[1.12] font-black text-balance break-words">
+                Оцифровываю домашние видеокассеты
+                <span className="mt-1 block text-brandsoft">в Тобольске.</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/90 sm:text-xl">
-                Я владелец мастерской «Хай-Фай» в Тобольске. Перенесу семейные
-                записи MiniDV и Digital8 в файлы, которые можно смотреть без
-                видеокамеры. Сам принимаю кассеты, проверяю их состояние и
-                согласую стоимость до начала оцифровки. Верну оригиналы вместе
-                с готовыми файлами. По телефону вы говорите со мной.
+                Перепишу записи с кассет MiniDV и Digital8 на флешку, жёсткий
+                диск или в облако — в файлы, которые можно смотреть без
+                видеокамеры. Я владелец мастерской «Хай-Фай», сам принимаю
+                кассеты, проверяю их состояние и согласую стоимость до начала
+                оцифровки. Оригиналы верну вместе с готовыми файлами. По
+                телефону вы говорите со мной.
+              </p>
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="mt-4 flex flex-wrap gap-x-2 gap-y-1 font-mono text-[13px] font-bold tracking-[0.04em] text-brandsoft uppercase sm:text-[14px] sm:tracking-[0.06em]">
+                <span>
+                  MiniDV — от{" "}
+                  <span className="whitespace-nowrap">
+                    {formatMoney(TAPE_KINDS.minidvShort.price)}
+                  </span>
+                </span>
+                <span aria-hidden className="hidden sm:inline">·</span>
+                <span>
+                  Digital8 — от{" "}
+                  <span className="whitespace-nowrap">
+                    {formatMoney(TAPE_KINDS.digital8Short.price)} за кассету
+                  </span>
+                </span>
               </p>
             </Reveal>
             <Reveal delay={240}>
@@ -169,7 +188,7 @@ export default function Hero() {
               <TapeSticker
                 text="Кате 3 года. Дача"
                 tilt="4deg"
-                className="floaty absolute -right-2 -bottom-5 z-20 hidden [animation-delay:1.4s] sm:inline-block"
+                className="floaty absolute -right-2 bottom-14 z-20 hidden [animation-delay:1.4s] sm:inline-block"
               />
               <div
                 className={`-rotate-2 drop-shadow-[0_34px_44px_rgba(0,0,0,0.55)] ${
@@ -211,7 +230,7 @@ export default function Hero() {
                 <dt className="order-2 mt-1.5 text-[15px] leading-snug text-paper/70">
                   {s.label}
                 </dt>
-                <dd className="font-display order-1 text-3xl font-bold text-brandsoft sm:text-4xl">
+                <dd className="font-display order-1 text-2xl font-bold text-brandsoft sm:text-4xl">
                   {s.value}
                 </dd>
               </div>

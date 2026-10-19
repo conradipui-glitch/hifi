@@ -55,9 +55,9 @@ function FormatGuide() {
 
   return (
     <div className="rounded-[28px] border-2 border-ink bg-cream p-5 shadow-[8px_8px_0_0_rgba(34,27,18,0.9)] sm:p-7">
-      <p className="font-mono text-xs font-bold tracking-[0.18em] text-branddark uppercase">
+      <h3 className="font-mono text-xs font-bold tracking-[0.18em] text-branddark uppercase">
         Гид: какая у меня кассета?
-      </p>
+      </h3>
       <div className="mt-4 flex flex-wrap gap-2.5" role="tablist" aria-label="Формат кассеты">
         {(Object.keys(FORMAT_INFO) as Format[]).map((f) => (
           <button
@@ -138,6 +138,10 @@ function FormatGuide() {
             </p>
           ))}
         </div>
+        <p className="mt-4 text-[15px] leading-snug text-ink3">
+          Большие кассеты VHS от видеомагнитофона я не оцифровываю: работаю
+          только с MiniDV и Digital8.
+        </p>
       </div>
     </div>
   );
@@ -315,7 +319,7 @@ export default function Digitize() {
           <div>
             <Reveal>
               <h3 className="font-display text-xl font-bold sm:text-2xl">
-                Как устроена оцифровка
+                Как проходит перезапись видеокассет на флешку или диск
               </h3>
             </Reveal>
             <ol className="mt-6 space-y-5">
@@ -360,12 +364,12 @@ export default function Digitize() {
           </Reveal>
           <Reveal delay={100} className="min-w-0 lg:col-span-2">
             <div className="flex h-full flex-col rounded-[28px] border-2 border-ink bg-cream p-6 sm:p-7">
-              <p className="font-mono text-xs font-bold tracking-[0.18em] text-branddark uppercase">
+              <h3 className="font-mono text-xs font-bold tracking-[0.18em] text-branddark uppercase">
                 Прайс коротко
-              </p>
+              </h3>
               <ul className="mt-4 flex-1 divide-y divide-dashed divide-ink/15">
                 {PRICE_SHORT.map(([name, price]) => (
-                  <li key={name} className="flex items-baseline justify-between gap-4 py-2.5">
+                  <li key={name} className="flex flex-col gap-1 py-2.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <span className="text-[16px] font-semibold">{name}</span>
                     <span className="shrink-0 font-mono text-[15px] font-bold whitespace-nowrap">
                       {price}
@@ -406,7 +410,7 @@ export default function Digitize() {
           <p className="mt-8 flex items-center gap-3 font-mono text-sm text-ink3">
             <Disc className="h-5 w-5 shrink-0" />
             <Usb className="h-5 w-5 shrink-0" />
-            Я работаю с цифровыми записями MiniDV и Digital8. Если на кассете написано Hi8 или Video8, сначала уточню формат записи и возможность считывания: одной маркировки недостаточно. Аудиокассеты, бобины и киноплёнку не оцифровываю.
+            Я работаю с цифровыми записями MiniDV и Digital8. Если на кассете написано Hi8 или Video8, сначала уточню формат записи и возможность считывания: одной маркировки недостаточно. Большие кассеты VHS, аудиокассеты, бобины и киноплёнку не оцифровываю.
           </p>
         </Reveal>
       </div>

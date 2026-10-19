@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Я оцифровываю кассеты MiniDV и Digital8 в Тобольске. Передам файлы на флешке, диске или через облако и верну оригиналы кассет. «Хай-Фай», 8-й микрорайон, дом 16, вход со двора. Пн–Пт 9:00–18:00, приём по звонку." />
+    <meta name="description" content="Оцифровываю домашние видеокассеты MiniDV и Digital8 в Тобольске. Перезапись на флешку, диск или в облако, оригиналы возвращаю. Мастерская «Хай-Фай», 8-й микрорайон, 16. Пн–Пт 9:00–18:00, приём по звонку." />
+    <meta name="geo.region" content="RU-TYU" />
+    <meta name="geo.placename" content="Тобольск" />
+    <link rel="canonical" href="https://conradipui-glitch.github.io/hifi/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:title" content="Оцифровка MiniDV и Digital8 — «Хай-Фай», Тобольск" />
-    <meta property="og:description" content="Я оцифровываю кассеты MiniDV и Digital8 в Тобольске. Сам принимаю кассеты, стоимость согласую до работы. Оригиналы верну вместе с файлами." />
+    <meta property="og:title" content="Оцифровка видеокассет MiniDV и Digital8 — «Хай-Фай», Тобольск" />
+    <meta property="og:description" content="Оцифровываю домашние видеокассеты MiniDV и Digital8 в Тобольске. Перезапись на флешку, диск или в облако. Оригиналы возвращаю вместе с файлами." />
     <meta property="og:url" content="https://conradipui-glitch.github.io/hifi/" />
     <meta name="theme-color" content="#221b12" />
-    <title>Оцифровка MiniDV и Digital8 в Тобольске | Хай-Фай</title>
+    <title>Оцифровка видеокассет MiniDV и Digital8 в Тобольске | Хай-Фай</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='9' width='42' height='30' rx='6' fill='%23221b12'/%3E%3Crect x='8' y='14' width='32' height='9' rx='2' fill='%23f3c969'/%3E%3Ccircle cx='16' cy='30' r='5.2' fill='none' stroke='%23f5eedf' stroke-width='2.4'/%3E%3Ccircle cx='32' cy='30' r='5.2' fill='none' stroke='%23f5eedf' stroke-width='2.4'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +29,8 @@
           "description": "Я оцифровываю видеокассеты MiniDV и Digital8 в Тобольске. Сам принимаю кассеты, согласую стоимость до работы и возвращаю оригиналы вместе с готовыми файлами.",
           "url": "https://conradipui-glitch.github.io/hifi/",
           "telephone": "+7 905 822-01-35",
-          "priceRange": "₽₽",
+          "priceRange": "600–900 ₽ за кассету",
+          "currenciesAccepted": "RUB",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "8-й микрорайон, дом 16, 1 этаж, вход со двора",
@@ -56,9 +60,47 @@
             {
               "@type": "Offer",
               "itemOffered": {
-                "@type": "Service",
-                "name": "Оцифровка видеокассет MiniDV и Digital8"
+                "@id": "https://conradipui-glitch.github.io/hifi/#service"
               }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://conradipui-glitch.github.io/hifi/#service",
+          "name": "Оцифровка видеокассет MiniDV и Digital8",
+          "serviceType": "Оцифровка видеокассет",
+          "provider": {
+            "@id": "https://conradipui-glitch.github.io/hifi/#business"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Тобольск"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Оцифровка MiniDV до 60 минут",
+              "price": "600",
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "name": "Оцифровка MiniDV 60–90 минут",
+              "price": "800",
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "name": "Оцифровка Digital8 до 60 минут",
+              "price": "700",
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "name": "Оцифровка Digital8 60–90 минут",
+              "price": "900",
+              "priceCurrency": "RUB"
             }
           ]
         },
@@ -72,6 +114,30 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Я считываю запись с кассеты MiniDV или Digital8 в цифровой файл в реальном времени: час видео занимает час захвата. Передам файлы на флешке, диске или через облако — как договоримся. Оригиналы кассет верну вместе с готовыми файлами."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Сколько стоит оцифровка одной кассеты?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MiniDV до 60 минут — 600 ₽, 60–90 минут — 800 ₽. Digital8 до 60 минут — 700 ₽, 60–90 минут — 900 ₽. При 5, 10 и 20 кассетах в заказе — скидка 100, 150 и 200 ₽ с каждой кассеты. Точную стоимость назову после осмотра кассеты."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Какие кассеты вы принимаете?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Я оцифровываю MiniDV и Digital8. Кассеты 8 мм с надписью Hi8, Video8 или 8 mm принимаю только после проверки формата записи: маркировка корпуса не показывает, цифровая запись на ленте или аналоговая. Большие кассеты VHS от видеомагнитофона не оцифровываю."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "На что можно записать готовое видео?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "На вашу флешку — бесплатно, на новую флешку 64 ГБ — 600 ₽, на DVD-диск — 200 ₽ за кассету. Можно получить файлы в облаке по ссылке: это бесплатно, ссылка хранится 30 дней. Способ передачи согласую с вами."
               }
             },
             {
@@ -106,6 +172,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <style>.reveal{opacity:1;transform:none}</style>
+      <p style="padding:24px;font-family:system-ui,sans-serif">
+        Мастерская «Хай-Фай», Тобольск, 8-й микрорайон, дом 16, вход со двора.
+        Оцифровка видеокассет MiniDV и Digital8. Телефон: +7 905 822-01-35.
+        Пн–Пт 9:00–18:00, приём по звонку.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

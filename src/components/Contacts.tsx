@@ -184,7 +184,7 @@ export default function Contacts() {
                 <p className="mt-4 font-mono text-xs font-bold tracking-[0.16em] uppercase opacity-70">
                   Мобильный · единственный номер
                 </p>
-                <p className="mt-1 font-mono text-[27px] font-bold tracking-tight sm:text-[32px]">
+                <p className="mt-1 font-sans text-[30px] font-extrabold tracking-tight tabular-nums sm:text-[38px]">
                   {PHONE_MOBILE_DISPLAY}
                 </p>
                 <p className="mt-2 text-[16px] font-semibold opacity-75">
@@ -204,7 +204,7 @@ export default function Contacts() {
               <div className="flex items-start gap-3.5">
                 <MapPin className="mt-1 h-7 w-7 shrink-0 text-rec" />
                 <div>
-                  <h3 className="font-display text-lg leading-snug font-bold sm:text-xl">
+                  <h3 className="font-sans text-[19px] leading-snug font-extrabold sm:text-[21px]">
                     {ADDRESS}
                   </h3>
                   <p className="mt-1.5 leading-relaxed text-ink3">
@@ -304,7 +304,7 @@ export function Footer() {
               </p>
               <ul className="mt-4 space-y-2.5">
                 <li>
-                  <a href={PHONE_MOBILE_HREF} className="font-mono text-[17px] font-bold text-cream transition hover:text-brandsoft">
+                  <a href={PHONE_MOBILE_HREF} className="font-sans text-[18px] font-extrabold tabular-nums text-cream transition hover:text-brandsoft">
                     {PHONE_MOBILE_DISPLAY}
                   </a>
                 </li>

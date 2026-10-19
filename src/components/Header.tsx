@@ -85,7 +85,7 @@ export default function Header() {
             </span>
             <a
               href={PHONE_MOBILE_HREF}
-              className="hidden min-h-11 items-center gap-2 rounded-xl bg-ink px-4 py-2.5 font-mono text-[15px] font-bold whitespace-nowrap text-cream transition hover:bg-ink2 sm:inline-flex"
+              className="hidden min-h-11 items-center gap-2 rounded-xl bg-ink px-4 py-2.5 font-sans text-[15px] font-extrabold tabular-nums whitespace-nowrap text-cream transition hover:bg-ink2 sm:inline-flex"
             >
               <Phone className="h-4.5 w-4.5 text-brandsoft" />
               {PHONE_MOBILE_DISPLAY}
@@ -122,7 +122,7 @@ export default function Header() {
             <div className="mt-3 grid gap-2.5 px-2">
               <a
                 href={PHONE_MOBILE_HREF}
-                className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 font-mono text-base font-bold text-ink"
+                className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 font-sans text-base font-extrabold tabular-nums text-ink"
               >
                 <Phone className="h-5 w-5" /> {PHONE_MOBILE_DISPLAY}
               </a>

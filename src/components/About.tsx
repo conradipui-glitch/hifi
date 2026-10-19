@@ -6,12 +6,23 @@ import {
   Wallet,
 } from "lucide-react";
 import { SectionHead, Reveal } from "./ui";
+import {
+  ADDRESS,
+  PHONE_MOBILE_DISPLAY,
+  TAPE_KINDS,
+  formatMoney,
+} from "../lib/data";
 
 const PASSPORT: [string, string][] = [
   ["Наименование", "Моя мастерская «Хай-Фай»"],
   ["Специализация", "оцифровка MiniDV и Digital8"],
+  ["Адрес", ADDRESS],
+  ["Телефон", PHONE_MOBILE_DISPLAY],
+  [
+    "Цена",
+    `MiniDV от ${formatMoney(TAPE_KINDS.minidvShort.price)}, Digital8 от ${formatMoney(TAPE_KINDS.digital8Short.price)}`,
+  ],
   ["Приём", "сам принимаю кассеты по звонку"],
-  ["Стоимость", "согласую до начала работы"],
   ["Работаю один", "сам оцифровываю и отвечаю на вопросы"],
   ["Связь", "принимаю звонки, без мессенджеров"],
   ["Выезд", "работаю только в мастерской"],

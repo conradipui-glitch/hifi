@@ -201,7 +201,7 @@ export function CallButton({
       <span>
         {label}
         {withNumber && (
-          <span className="mt-0.5 block font-mono text-[15px] font-bold tracking-wide">
+          <span className="mt-0.5 block font-sans text-[15.5px] font-extrabold tabular-nums tracking-wide">
             {PHONE_MOBILE_DISPLAY}
           </span>
         )}
