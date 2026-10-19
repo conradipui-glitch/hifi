@@ -7,6 +7,7 @@ import WindowsSoftware from "./components/WindowsSoftware";
 import Calculator from "./components/Calculator";
 import Services, { Limits } from "./components/Services";
 import About, { Visit } from "./components/About";
+import Faq from "./components/Faq";
 import Contacts, { Footer } from "./components/Contacts";
 import { PHONE_MOBILE_DISPLAY, PHONE_MOBILE_HREF } from "./lib/data";
 
@@ -85,6 +86,7 @@ export default function App() {
         <Limits />
         <About />
         <Visit />
+        <Faq />
         <Contacts />
       </main>
       <Footer />

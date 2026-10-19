@@ -164,7 +164,7 @@ export default function Contacts() {
     <section id="contacts" className="scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <SectionHead
-          chapter="08"
+          chapter="09"
           kicker="Контакты"
           title="Позвоните — трубку возьмёт сам мастер"
           lead={
@@ -296,6 +296,7 @@ export function Footer() {
                   ["#services", "Услуги и прайс"],
                   ["#about", "О мастерской"],
                   ["#visit", "Как проходит визит"],
+                  ["#faq", "Частые вопросы"],
                   ["#contacts", "Контакты"],
                 ].map(([href, label]) => (
                   <li key={href}>
