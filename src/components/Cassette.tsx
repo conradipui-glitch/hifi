@@ -248,7 +248,7 @@ export function MiniDvCassette({ className = "" }: { className?: string }) {
         fontWeight="600"
         fill="#33415e"
       >
-        Кате 3 года
+        Кате 17 лет
       </text>
       <text
         x="223"

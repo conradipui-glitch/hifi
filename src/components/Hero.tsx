@@ -186,7 +186,7 @@ export default function Hero() {
                 className="floaty absolute -top-7 left-2 z-20 hidden sm:inline-block"
               />
               <TapeSticker
-                text="Кате 3 года. Дача"
+                text="Кате 17 лет. Дача"
                 tilt="4deg"
                 className="floaty absolute -right-2 bottom-14 z-20 hidden [animation-delay:1.4s] sm:inline-block"
               />
