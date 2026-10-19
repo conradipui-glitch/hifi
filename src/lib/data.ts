@@ -83,7 +83,7 @@ export function nextDiscountStep(
 }
 
 export function formatMoney(n: number): string {
-  return n.toLocaleString("ru-RU") + " ₽";
+  return n.toLocaleString("ru-RU") + "\u00A0₽";
 }
 
 export function plural(n: number, forms: [string, string, string]): string {

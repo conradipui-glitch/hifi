@@ -54,7 +54,7 @@ const MEDIUMS: {
   {
     id: "usb",
     title: "Новая флешка 64 ГБ",
-    price: "+600 ₽",
+    price: "+600 ₽",
     note: "флешка останется у вас, хватает на большой архив",
     Icon: Usb,
     cheat: "Записать прошу на новую флешку",
@@ -62,7 +62,7 @@ const MEDIUMS: {
   {
     id: "dvd",
     title: "На DVD-диски",
-    price: "+200 ₽ за кассету",
+    price: "+200 ₽ за кассету",
     note: "по старинке, для DVD-проигрывателя",
     Icon: Disc,
     cheat: "Записать прошу на DVD-диски",
@@ -410,7 +410,7 @@ export default function Calculator() {
                   onClick={() => setNoise((v) => !v)}
                   Icon={Sparkles}
                   title="Шумоподавление"
-                  price="+250 ₽ / кассета"
+                  price="+250 ₽ / кассета"
                   note="убрать часть «снега» и шипения старой плёнки"
                 />
                 <Toggle
@@ -418,7 +418,7 @@ export default function Calculator() {
                   onClick={() => setEdit((v) => !v)}
                   Icon={Scissors}
                   title="Простой монтаж"
-                  price="от 500 ₽ / кассета"
+                  price="от 500 ₽ / кассета"
                   note="склеить фрагменты и вырезать пустые места в Pinnacle Studio"
                 />
                 <Toggle
