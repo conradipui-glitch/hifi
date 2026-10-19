@@ -94,7 +94,10 @@ export function useOpenStatus(): OpenStatus {
     const id = window.setInterval(() => setStatus(getOpenStatus()), 60_000);
     return () => window.clearInterval(id);
   }, []);
-  return status;
+  return {
+    ...status,
+    detail: status.detail.replace("Работаем до", "Работаю до"),
+  };
 }
 
 export function StatusDot({ status }: { status: OpenStatus }) {
@@ -183,7 +186,7 @@ export function SectionHead({
 export function CallButton({
   className = "",
   withNumber = true,
-  label = "Позвонить мастеру",
+  label = "Позвонить",
 }: {
   className?: string;
   withNumber?: boolean;

@@ -60,7 +60,7 @@ function MobileCallBar() {
         >
           <Phone className="h-5.5 w-5.5 shrink-0" />
           <span className="leading-tight">
-            <span className="block text-[16px] font-extrabold">Позвонить мастеру</span>
+            <span className="block text-[16px] font-extrabold">Позвонить</span>
             <span className="block font-mono text-[13px] font-bold">
               {PHONE_MOBILE_DISPLAY}
             </span>

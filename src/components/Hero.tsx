@@ -49,10 +49,10 @@ function Corner({ className }: { className: string }) {
 }
 
 const STATS: { value: string; label: string }[] = [
-  { value: "30+", label: "лет мастер работает в Тобольске" },
-  { value: "4,6", label: "рейтинг мастерской в 2ГИС" },
-  { value: "1", label: "человек: мастер, приёмщик и директор" },
-  { value: "100%", label: "оригиналов кассет возвращаются вам" },
+  { value: "MiniDV", label: "перевожу запись в цифровые файлы" },
+  { value: "Digital8", label: "считываю цифровое видео с кассет" },
+  { value: "Лично", label: "принимаю технику и отвечаю на звонки" },
+  { value: "До работ", label: "согласую с вами стоимость" },
 ];
 
 export default function Hero() {
@@ -119,18 +119,18 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display mt-5 text-[clamp(1.9rem,5.2vw,3.6rem)] leading-[1.12] font-black text-balance">
-                Плёнка не вечна.
-                <span className="mt-1 block text-brandsoft">Память — должна быть.</span>
+                Оцифровываю кассеты.
+                <span className="mt-1 block text-brandsoft">Ремонтирую технику.</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-paper/90 sm:text-xl">
-                Мастерская «Хай-Фай» — это один мастер и более тридцати лет работы
-                в Тобольске. Он переводит в цифру семейные кассеты MiniDV и
-                Digital8, ставит Windows и нужные программы, спасает файлы со
-                старых дисков, чинит ноутбуки, магнитолы, роботы-пылесосы и старую
-                добрую аудиотехнику. Без менеджеров и накруток: вы разговариваете
-                лично с тем, кто будет делать работу.
+                Я владелец и мастер «Хай-Фай» в Тобольске. Перевожу в цифру
+                семейные кассеты MiniDV и Digital8, устанавливаю Windows и
+                программы, восстанавливаю файлы со старых дисков. Ремонтирую
+                компьютеры, магнитолы, роботы-пылесосы и аудиотехнику.
+                Сам принимаю технику, объясняю, что нужно сделать, и согласую
+                стоимость до начала работы. По телефону вы говорите со мной.
               </p>
             </Reveal>
             <Reveal delay={240}>
@@ -152,7 +152,7 @@ export default function Hero() {
                 </span>
                 <span>
                   <strong className="text-cream">{status.label}.</strong>{" "}
-                  {status.detail} Мастер работает один и на дом не выезжает —
+                  {status.detail} Я работаю один и на дом не выезжаю —
                   перед визитом обязательно позвоните и договоритесь о времени.
                 </span>
               </p>
